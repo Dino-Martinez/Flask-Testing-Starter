@@ -13,54 +13,54 @@ class StringTests(TestCase):
         # Step 3: Call the function being tested to get its actual output
         actual = greet_by_name('Jeremy')
 
-        # Step 4: Compare expected & actual outcomes. If they match, the test 
+        # Step 4: Compare expected & actual outcomes. If they match, the test
         # passes
         self.assertEqual(actual, expected)
 
     def test_greeting_dani(self):
         """Test for greet_by_name"""
         expected = 'Hello, Dani!'
-        actual = greet_by_name('Meredith')
+        actual = greet_by_name('Dani')
         self.assertEqual(actual, expected)
 
     def test_reverse_long(self):
         """Test reversing a long string."""
-        expected = ''
-        actual = ''
+        expected = '.eugnoc mudretni sucnohr malluN .tilev subicuaf non ,merol odommoc a nI .cnun subinif ca essidnepsuS .teeroal sisilicaf tege mauq satsege euqsiuQ .euqen secirtlu ,ue assam taiguef ,taiguef assam tema tis regetnI .sutem eugnoc siuq ,alugil tirerdneh non niorP .neipas secirtlu ca mulubitseV .adivarg teuqila tilev ue tare mulubitsev maitE .siuq suirav oel arreviv missingid ,sutcel surup repmes tnesearP .ta euqsirelecs sutem dnefiele eranro ,merol eranro euqitsirt tU .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL'
+        actual = reverse('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique ornare lorem, ornare eleifend metus scelerisque at. Praesent semper purus lectus, dignissim viverra leo varius quis. Etiam vestibulum erat eu velit aliquet gravida. Vestibulum ac ultrices sapien. Proin non hendrerit ligula, quis congue metus. Integer sit amet massa feugiat, feugiat massa eu, ultrices neque. Quisque egestas quam eget facilisis laoreet. Suspendisse ac finibus nunc. In a commodo lorem, non faucibus velit. Nullam rhoncus interdum congue.')
         self.assertEqual(actual, expected)
 
     def test_reverse_short(self):
         """Test reversing a short string."""
-        expected = ''
-        actual = ''
+        expected = 'drawroF'
+        actual = reverse('Forward')
         self.assertEqual(actual, expected)
 
     def test_reverse_words_long(self):
         """Test reversing words in a long string."""
-        expected = ''
-        actual = ''
+        expected = 'olleH ym eman si .nhoJ I ma a naf fo ruoy .krow I epoh taht uoy lliw eb ym .dneirf'
+        actual = reverse_words('Hello my name is John. I am a fan of your work. I hope that you will be my friend.')
         self.assertEqual(actual, expected)
 
     def test_reverse_words_short(self):
         """Test reversing words in a short string."""
-        expected = ''
-        actual = ''
+        expected = 'Hi there'
+        actual = reverse_words('iH ereht')
         self.assertEqual(actual, expected)
 
     def test_sarcastic_long(self):
         """Test sarcastic-ifying a long string."""
-        expected = ''
-        actual = ''
+        expected = 'YoU tHiNk YoUrE sO gReAt?'
+        actual = sarcastic('you think youre so great?')
         self.assertEqual(actual, expected)
 
     def test_sarcastic_short(self):
         """Test sarcastic-ifying a short string."""
-        expected = ''
-        actual = ''
+        expected = 'HeLlO'
+        actual = sarcastic('hello')
         self.assertEqual(actual, expected)
 
 
     def test_find_longest_word_empty(self):
         expected = ''
-        actual = ''
+        actual = find_longest_word('')
         self.assertEqual(actual, expected)
